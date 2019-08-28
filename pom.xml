@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.fansh</groupId>
+    <artifactId>2pc-transaction</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.4.RELEASE</version>
+    </parent>
+
+    <modules>
+        <module>transaction-common</module>
+        <module>transaction-core</module>
+        <module>transaction-dubbo</module>
+        <module>transaction-springCloud</module>
+        <module>transaction-manager</module>
+        <module>transaction-communication</module>
+    </modules>
+
+    <properties>
+        <!-- 项目源文件编码形式 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- junit单元 -->
+        <junit.version>4.10</junit.version>
+
+        <transaction.common.version>1.0-SNAPSHOT</transaction.common.version>
+        <transaction.core.version>1.0-SNAPSHOT</transaction.core.version>
+        <transaction.communication.version>1.0-SNAPSHOT</transaction.communication.version>
+        <dubbo.version>2.5.4</dubbo.version>
+
+        <kyro.version>4.0.0</kyro.version>
+        <aspect.version>1.8.3</aspect.version>
+        <!-- Log4j日志版本 -->
+        <log4j.version>1.2.17</log4j.version>
+
+        <!-- slf日志 -->
+        <slf4j.version>1.6.4</slf4j.version>
+
+        <!-- redis客户端版本 -->
+        <jedis.version>2.6.0</jedis.version>
+
+        <!-- spring整合redis插件版本 -->
+        <spring-data-redis>1.6.4.RELEASE</spring-data-redis>
+
+        <zkclient.version>0.1</zkclient.version>
+
+        <netty.version>4.1.17.Final</netty.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.fansh</groupId>
+                <artifactId>transaction-common</artifactId>
+                <version>${transaction.common.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fansh</groupId>
+                <artifactId>transaction-core</artifactId>
+                <version>${transaction.core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fansh</groupId>
+                <artifactId>transaction-communication</artifactId>
+                <version>${transaction.communication.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.esotericsoftware</groupId>
+                <artifactId>kryo-shaded</artifactId>
+                <version>${kyro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspect.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <!-- redis支持 -->
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${jedis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-redis</artifactId>
+                <version>${spring-data-redis}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.sgroschupf</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zkclient.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty.version}</version>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
+
+</project>
