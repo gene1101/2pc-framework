@@ -34,7 +34,7 @@
         <transaction.common.version>1.0-SNAPSHOT</transaction.common.version>
         <transaction.core.version>1.0-SNAPSHOT</transaction.core.version>
         <transaction.communication.version>1.0-SNAPSHOT</transaction.communication.version>
-        <dubbo.version>2.5.4</dubbo.version>
+        <dubbo.version>2.6.12</dubbo.version>
 
         <kyro.version>4.0.0</kyro.version>
         <aspect.version>1.8.3</aspect.version>
